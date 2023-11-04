@@ -1,2 +1,2 @@
 # Javascript
-All Jaavscript programs
+All Simple Jaavscript programs one by one

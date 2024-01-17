@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+    /* CSS styles for the glowing border effect */
+    #myImage {
+      width: 100px; /* Initial width */
+      border: 4px solid transparent; /* Transparent border initially */
+      border-radius: 8px; /* Optional: rounded corners */
+      transition: border-color 0.5s ease; /* Smooth transition for the border color */
+      display: block;
+      margin: auto; /* Center the image */
+    }
+
+    /* Additional styles to increase image size when clicked */
+    #myImage.enlarged {
+      width: 400px; /* Enlarged width */
+    }
+    
+  </style>
+  
+  <script>
+    function toggleImageSize() {
+      var image = document.getElementById('myImage');
+      image.classList.toggle('enlarged');
+    }
+
+    function turnOnLight() {
+      var image = document.getElementById('myImage');
+      image.src = 'lighton.jpg';
+      image.style.borderColor = 'black'; /* Set border color to black when turning on the light */
+    }
+
+    function turnOffLight() {
+      var image = document.getElementById('myImage');
+      image.src = 'lightoff.jpeg';
+      image.style.borderColor = 'transparent'; /* Set border color to transparent when turning off the light */
+    }
+  </script>
+  
+<body>
+
+<h2>What Can JavaScript Do?</h2>
+
+<p>JavaScript can change HTML attribute values.</p>
+
+<p>In this case, JavaScript changes the value of the src (source) attribute of an image.</p>
+<br><br>
+<img id="myImage" src="lightoff.jpeg" style="width:100px">
+<br>
+<button onclick="document.getElementById('myImage').src='lighton.jpg'">Turn on the light</button>
+<br>
+
+
+<button onclick="document.getElementById('myImage').src='lightoff.jpeg'">Turn off the light</button>
+
+</body>
+</html>
+
